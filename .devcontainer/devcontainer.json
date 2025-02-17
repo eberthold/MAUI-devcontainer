@@ -1,0 +1,21 @@
+{
+	"build": { 
+		"dockerfile": "dockerfile" 
+	},
+	"customizations": {
+		"vscode" : {
+			"extensions": [
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.dotnet-maui",
+				"ms-vscode.makefile-tools",
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+	"runArgs": [
+		"--userns=keep-id"
+	],
+	"containerUser": "vscode",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind,Z",
+	"workspaceFolder": "/workspaces"
+}
